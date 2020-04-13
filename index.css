@@ -555,6 +555,54 @@ ul {
  *    the component.
  */
 
+
+/* Body */
+
+
+.post-title {
+    color: #151515;
+    font-family: "Roboto Slab";
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+}
+
+@media (max-width: @mobileBreakpoint) {
+    .post-title {
+        font-size: 1.4em;
+    }
+}
+
+.index-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        padding-left: 0;
+        margin-bottom: 2em;
+
+        &:last-child { margin-bottom: 0; }
+
+        .date {
+            color: #AAA;
+        }
+    }
+
+    time::before {
+        content: " • "
+    }
+
+    time::after {
+        content: "\A";
+        white-space: pre;
+    }
+}
+
+
 .Grid {
   box-sizing: border-box;
   display: -webkit-box;
